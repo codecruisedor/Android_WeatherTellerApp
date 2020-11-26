@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:blurkit="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7B8788"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleOfApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="WeatherTeller"
+        android:textColor="#fff"
+        android:textSize="30sp"
+        android:textStyle="bold|normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/clipartImage"
+        android:layout_width="126dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="104dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/weatherclipart" />
+
+    <EditText
+        android:id="@+id/editText_city"
+        android:layout_width="180sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="304dp"
+        android:hint="Enter your city"
+        android:textColor="#fff"
+        android:textColorHint="#000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.939"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleOfApp"></EditText>
+
+    <TextView
+        android:id="@+id/textView_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="312dp"
+        android:text="City : "
+        android:textColor="#fff"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/editText_city"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleOfApp" />
+
+    <Button
+        android:id="@+id/button_go"
+        android:layout_width="120sp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="92dp"
+        android:text="GO"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="130sp"
+        android:layout_marginBottom="160dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <io.alterac.blurkit.BlurLayout
+            android:id="@+id/blurLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.406"
+            app:blk_blurRadius="22"
+            blurkit:blk_fps="60">
+
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="cursive"
+                android:paddingTop="18sp"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="30sp"
+                android:textStyle="bold|italic" />
+        </io.alterac.blurkit.BlurLayout>
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
