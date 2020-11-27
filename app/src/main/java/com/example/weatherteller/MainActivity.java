@@ -28,7 +28,7 @@ import org.json.JSONObject;
 
 import java.text.DecimalFormat;
 
-//For Api call : http://api.openweathermap.org/data/2.5/weather?q=London&appid=unique_key
+//For Api call : http://api.openweathermap.org/data/2.5/weather?q=London&appid=7d542010e460dc1969d14cf161149ccc
 public class MainActivity extends AppCompatActivity {
 //TODO:Go here: https://github.com/CameraKit/blurkit-android
     Button button;
@@ -36,11 +36,10 @@ public class MainActivity extends AppCompatActivity {
     TextView res;
     View linearLayoutView;
     BlurLayout blurLayout;
-    LinearLayout textLayout;
     ConstraintLayout cons_layout;
 
     String baseURL = "http://api.openweathermap.org/data/2.5/weather?q=";
-    String API = "&appid=unique_key";
+    String API = "&appid=7d542010e460dc1969d14cf161149ccc";
 
     @Override
     protected void onStop() {
@@ -129,8 +128,10 @@ public class MainActivity extends AppCompatActivity {
             cons_layout.setBackgroundResource(R.drawable.sunny2);
         }else if(weather.equalsIgnoreCase("Snow")){
             cons_layout.setBackgroundResource(R.drawable.snowyday);
-        }else if(weather.equalsIgnoreCase("Haze")){
+        }else if(weather.equalsIgnoreCase("Haze")) {
             cons_layout.setBackgroundResource(R.drawable.haze);
+        }else if(weather.equalsIgnoreCase("Thunderstorm")){
+            cons_layout.setBackgroundResource(R.drawable.thenderstorm);
         }else{
             cons_layout.setBackgroundResource(R.color.defaultColor);
         }
