@@ -28,7 +28,7 @@ import org.json.JSONObject;
 
 import java.text.DecimalFormat;
 
-//For Api call : http://api.openweathermap.org/data/2.5/weather?q=London&appid=7d542010e460dc1969d14cf161149ccc
+//For Api call : http://api.openweathermap.org/data/2.5/weather?q=London&appid=key
 public class MainActivity extends AppCompatActivity {
 //TODO:Go here: https://github.com/CameraKit/blurkit-android
     Button button;
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     ConstraintLayout cons_layout;
 
     String baseURL = "http://api.openweathermap.org/data/2.5/weather?q=";
-    String API = "&appid=7d542010e460dc1969d14cf161149ccc";
+    String API = "&appid=key";
 
     @Override
     protected void onStop() {
